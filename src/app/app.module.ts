@@ -16,6 +16,15 @@ import { FeatureComponent } from './components/landing/feature/feature.component
 import { FooterComponent } from './components/landing/footer/footer.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +36,22 @@ import {MatDialogModule} from '@angular/material/dialog';
     HeaderComponent,
     BannerComponent,
     FeatureComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    AngularFireModule.initializeApp(environment.firebase),  // imports firebase/app needed for everything
+  AngularFirestoreModule,                                 // imports firebase/firestore, only needed for database features
+  // AngularFireStorageModule,                               // imports firebase/storage only needed for storage features
+  AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

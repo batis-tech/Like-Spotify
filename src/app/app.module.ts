@@ -25,6 +25,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 import { environment } from '../environments/environment';
+import { SidebarComponent } from './components/home/sidebar/sidebar.component';
+import { HomeHeaderComponent } from './components/home/header/header.component';
+import { MusicsComponent } from './components/home/musics/musics.component';
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +41,9 @@ import { environment } from '../environments/environment';
     BannerComponent,
     FeatureComponent,
     FooterComponent,
+    SidebarComponent,
+    HomeHeaderComponent,
+    MusicsComponent
 
   ],
   imports: [
@@ -49,9 +56,10 @@ import { environment } from '../environments/environment';
     MatFormFieldModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),  // imports firebase/app needed for everything
-  AngularFirestoreModule,                                 // imports firebase/firestore, only needed for database features
-  // AngularFireStorageModule,                               // imports firebase/storage only needed for storage features
-  AngularFireDatabaseModule,
+    AngularFirestoreModule,                                 // imports firebase/firestore, only needed for database features
+    // AngularFireStorageModule,                               // imports firebase/storage only needed for storage features
+    AngularFireDatabaseModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<!-- Sidebar ends -->
+<!-- Remove class [ h-64 ] when adding a card block -->
+<div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex">
+  <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
+  <div class="w-full h-full">
+    <div *ngFor="let r of releases ; let i = index">
+      <div *ngIf="i > releases.length - 7">
+        <div class="column flex-1">
+          <div class="card">
+              <img [src]="r.images[0].url" class="rounded mb-3" width="180">
+            <h3>{{ r.name }}</h3>
+            <h3>{{ r.release_date }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

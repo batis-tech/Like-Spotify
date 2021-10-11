@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 import { AngularFirestore, AngularFirestoreDocument } from "@angular/fire/compat/firestore";
 import { Router } from "@angular/router";
+import { HttpClient,HttpHeaders } from "@angular/common/http";
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   SignIn: boolean;
-  constructor(private afAuth :AngularFireAuth,private afs :AngularFirestore, private router :Router) {
+  constructor(private afAuth :AngularFireAuth,private afs :AngularFirestore, private router :Router, private http :HttpClient) {
    this.SignIn = false;
    this.afAuth.onAuthStateChanged((user)=>{
      if(user){
@@ -45,4 +47,16 @@ export class DataService {
       }
       })
   }
+
+
+
+      integrate: HttpHeaders = new HttpHeaders({
+      'Authorization': 'Bearer BQBppnYrmp2SJDF2Bt6SQXRU2XyP6dtwwVyThyRhv1R0a1uHljWxooSeyqVCFO9ecTyxzU8h7TzJLpj-T0Di3U4plIdGCbatihIQ7R2LQ7hIJRI14TDtFHPlui58ebdKE5NMkr3_dSsX8llwiZJDlrjezzXBgvA'
+      })
+
+    getNewRelease(){
+    return this.http.get<any>('https://api.spotify.com/v1/browse/new-releases', {headers: this.integrate})
+    }
+
+
 }

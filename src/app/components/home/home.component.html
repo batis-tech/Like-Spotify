@@ -1,5 +1,12 @@
 <app-header-home></app-header-home>
-<div class="flex">
-<app-sidebar></app-sidebar>
-<app-musics class="flex-1"></app-musics>
+  <div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="flex-warp w-3/4">
+
+<router-outlet></router-outlet>
 </div>
+<!-- <div class="flex-warp w-3/4">
+  <app-playlist></app-playlist>
+  <app-musics></app-musics>
+</div> -->
+  </div>

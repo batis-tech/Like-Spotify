@@ -1,15 +1,24 @@
 <!-- Sidebar ends -->
+
 <!-- Remove class [ h-64 ] when adding a card block -->
-<div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex">
+<div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex my-12">
   <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
   <div class="w-full h-full">
+    <h2>New Releases</h2>
     <div *ngFor="let r of releases ; let i = index">
       <div *ngIf="i > releases.length - 7">
         <div class="column flex-1">
-          <div class="card">
-              <img [src]="r.images[0].url" class="rounded mb-3" width="180">
-            <h3>{{ r.name }}</h3>
-            <h3>{{ r.release_date }}</h3>
+          <div class="card justify-center items-center">
+            <img [src]="r.images[0].url" class="rounded mb-3" width="180">
+
+            <h3 class="text-left" *ngIf="r.name.length >9 ">{{ r.name.substring(0, 9) }}.....</h3>
+            <h3 class="text-left" *ngIf="r.name.length <= 9 ">{{ r.name.substring(0, 9) }}</h3>
+
+            <mat-chip-list class="example-chip">
+              <mat-chip class="example-box" >
+                {{ r.artists[0].name }}
+              </mat-chip>
+            </mat-chip-list>
           </div>
         </div>
       </div>

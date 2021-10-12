@@ -19,6 +19,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -29,6 +30,11 @@ import { SidebarComponent } from './components/home/sidebar/sidebar.component';
 import { HomeHeaderComponent } from './components/home/header/header.component';
 import { MusicsComponent } from './components/home/musics/musics.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ArtistsComponent } from './components/home/artists/artists.component';
+import { PlaylistComponent } from './components/home/playlist/playlist.component';
+import { AllListComponent } from './components/home/playlist/all-list/all-list.component';
+import { PListComponent } from './components/home/playlist/p-list/p-list.component';
+import { PlaylistdetailsComponent } from './components/home/playlist/p-list/playlistdetails/playlistdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +49,13 @@ import { HttpClientModule } from "@angular/common/http";
     FooterComponent,
     SidebarComponent,
     HomeHeaderComponent,
-    MusicsComponent
+    MusicsComponent,
+    ArtistsComponent,
+    PlaylistComponent,
+    AllListComponent,
+    PListComponent,
+    PlaylistdetailsComponent,
+
 
   ],
   imports: [
@@ -59,7 +71,8 @@ import { HttpClientModule } from "@angular/common/http";
     AngularFirestoreModule,                                 // imports firebase/firestore, only needed for database features
     // AngularFireStorageModule,                               // imports firebase/storage only needed for storage features
     AngularFireDatabaseModule,
-    HttpClientModule
+    HttpClientModule,
+        MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

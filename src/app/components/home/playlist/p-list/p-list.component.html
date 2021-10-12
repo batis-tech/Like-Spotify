@@ -1,0 +1,22 @@
+<!-- Sidebar ends -->
+<!-- Remove class [ h-64 ] when adding a card block -->
+<div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex">
+  <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
+  <div class="w-full h-full">
+    <h2  class="h2">Featured Playlist</h2>
+    <div *ngFor="let p of playlist ; let i = index" >
+        <div class="column flex-1" (click)="openDetails(p.id)">
+          <div class="card justify-center items-center">
+            <img [src]="p.images[0].url" class="rounded mb-3" width="180">
+            <h3 class="text-left" *ngIf="p.name.length >9 ">{{ p.name.substring(0, 9) }}.....</h3>
+            <h3 class="text-left" *ngIf="p.name.length <= 9 ">{{ p.name.substring(0, 9) }}</h3>
+            <mat-chip-list class="example-chip">
+              <mat-chip class="example-box" >
+                {{ p.owner.display_name }}
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

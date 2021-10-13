@@ -35,6 +35,8 @@ import { PlaylistComponent } from './components/home/playlist/playlist.component
 import { AllListComponent } from './components/home/playlist/all-list/all-list.component';
 import { PListComponent } from './components/home/playlist/p-list/p-list.component';
 import { PlaylistdetailsComponent } from './components/home/playlist/p-list/playlistdetails/playlistdetails.component';
+
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +74,8 @@ import { PlaylistdetailsComponent } from './components/home/playlist/p-list/play
     // AngularFireStorageModule,                               // imports firebase/storage only needed for storage features
     AngularFireDatabaseModule,
     HttpClientModule,
-        MatChipsModule
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,12 +15,11 @@ export class PListComponent implements OnInit {
     this.dataService.getPlaylist().subscribe((data:any) =>{
       console.log(data.playlists.items);
       this.playlist = data.playlists.items;
-
     })
 
   }
-  openDetails(id: any){
-    this.router.navigate(['playlists', id]);
+  openDetails(id: string){
+    this.router.navigate(['featured-playlists', id]);
   }
 
 }

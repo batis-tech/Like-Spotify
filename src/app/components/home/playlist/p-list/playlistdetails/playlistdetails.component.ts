@@ -29,6 +29,9 @@ this.detailsSub = this.dataService
   .getPlaylistDetails(id)
   .subscribe((data:any ) => {
     this.details = data ;
+    console.log(this.details);
+
+
 
   });
 }

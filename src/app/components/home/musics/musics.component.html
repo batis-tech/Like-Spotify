@@ -1,12 +1,11 @@
 <!-- Sidebar ends -->
 
 <!-- Remove class [ h-64 ] when adding a card block -->
-<div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex my-12">
+<div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex " style=" margin-left: 28%;">
   <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
   <div class="w-full h-full">
-    <h2>New Releases</h2>
+    <h2 >New Releases</h2>
     <div *ngFor="let r of releases ; let i = index">
-      <div *ngIf="i > releases.length - 7">
         <div class="column flex-1">
           <div class="card justify-center items-center">
             <img [src]="r.images[0].url" class="rounded mb-3" width="180">
@@ -21,7 +20,6 @@
             </mat-chip-list>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>

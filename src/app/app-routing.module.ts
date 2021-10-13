@@ -13,9 +13,10 @@ import { PlaylistdetailsComponent } from './components/home/playlist/p-list/play
 const routes: Routes = [
   {path:'', redirectTo: 'landing', pathMatch:'full'},
   {path:'home',component:HomeComponent,canActivate:[DataGuard],children:[
-    {path:'playlists',component:PListComponent,children:[
-          {path:':id',component:PlaylistdetailsComponent}    
+    {path:'featured-playlists',component:PListComponent,children:[
+          {path:':id',component:PlaylistdetailsComponent}
     ]},
+    {path:'songs',component:MusicsComponent}
   ]},
   {path:'sign-in',component:SigninComponent},
   {path:'sign-up',component:SignupComponent},

@@ -51,7 +51,7 @@ export class DataService {
 
 
   integrate: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQCPMy90uH4UajokLRsdUNZwWYxGBPBH_lDrzn42NgmdeTTo23QN8tGjAPAqqm3G0sOQq7ntekjXqX0F5dmsXfp0yc6Jt4hwwIRvv4_QNRL0NwCg2LMH8kFceE1zryDI-mXV2V8_hx3XGpLy-XpET8oZAISzkKY'
+  'Authorization': 'Bearer BQBEZ9d9u30n9xb9--S0PziIjoBTmM_oq813ZdjUOQAwqL2oH0OIF4DRbEGMh9wjuVWRRneRsZQTk6QhmI-7HLVRWjsu73qDosSmg7ZYNf5ZTjD4UEfFR8CpWGl40qZpIBPfjJT24JK8RwMW3GxoXV416TNG7d4'
   })
   getNewRelease(){
   return this.http.get<any>('https://api.spotify.com/v1/browse/new-releases', {headers: this.integrate})
@@ -66,18 +66,24 @@ export class DataService {
   }
 
   integratePlayList: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQAbJJvmZKwGcyAsg6kkT_-UBFITHZA2rpOUdJoI3f93zD6MT5AphontAjYfYe57CrTcf-QMP37zF-ACd36I2DREo5UOridrX7V-IkXklG5CCngS0EfuUVqst103W1vG30zpq0UdteUd77vdw4J__d_cOr6yjqo'
+  'Authorization': 'Bearer BQD6mrVql6ARk1YV-K5KnE3A8zKdlUwHeFmx8OVrUiTh2HGy2Xy-Vpl1Kn5MqjPdOCr7Px3XDA7D6gpsP9_dVvwuZQSdrVWRBT-bSLZCWr2vxbVdUducFtWZYRAftVgrLNw0GDrDk2J8GTudNdZVxW5F1qzSD1Q'
   })
   getPlaylist(){
-  return this.http.get<any>('https://api.spotify.com/v1/browse/featured-playlists?limit=50', {headers: this.integratePlayList})
+  return this.http.get<any>('https://api.spotify.com/v1/browse/featured-playlists', {headers: this.integratePlayList})
   }
 
   integratePlayListDetails: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQA-q4eaKT998gBzXHjod7Ay3bh1tCDb7KT3jnxinD5sbIE_Y8NW3xgv-c61xKGgHFKQOOeXMQ83nAhFQ5C54XvZdpqW0mCRXIq7YSwIPvBC_h2G9tvNZd9rDac3eQdzFODDSgEXGsvO7ZOf9Ji0HKQEnOlFehI'
+  'Authorization': 'Bearer BQAL-MGVm0Dc3TTnUex_BvW0SvVPfuQ1o0jV-_2sy-zZaBZYXREQ9VPGZjvebnt01FYAJZVE-_ikgRMjM_dY3yT6jsxZI7C_B1P3ohXZziug-IStF6fkNJuR8oW9vhqPkFd2hxoC9wtFhlEpHq7Faobb3CvHYwM'
   })
   getPlaylistDetails(id: string){
   return this.http.get<any>(`https://api.spotify.com/v1/browse/featured-playlists/${id}`, {headers: this.integratePlayListDetails})
   }
 
+  // search: HttpHeaders = new HttpHeaders({
+  // 'Authorization': 'Bearer BQD6mrVql6ARk1YV-K5KnE3A8zKdlUwHeFmx8OVrUiTh2HGy2Xy-Vpl1Kn5MqjPdOCr7Px3XDA7D6gpsP9_dVvwuZQSdrVWRBT-bSLZCWr2vxbVdUducFtWZYRAftVgrLNw0GDrDk2J8GTudNdZVxW5F1qzSD1Q'
+  // })
+  // getSearch(id: string){
+  // return this.http.get<any>('https://api.spotify.com/v1/search', {headers: this.search})
+  // }
 
 }

@@ -8,6 +8,22 @@ import {  Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
+  private httpOption ={
+    headers : new HttpHeaders({
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer BQBfTRBCVUmIMtV5TXyrICM_tchXKLHFxVU4CVfN5eFPfP5g1HASgiNFfEDbmdLVKSfwTgUjt487ofm30nXFR24ENGmdgKgWA7ULuYs_CBSULW26Wai1lnCUl2xekWAyuDYi4agq86YT4sRSpbgu8-o0ZecdYAc'
+    })
+  }
+
+  private httpArtist ={
+    headers : new HttpHeaders({
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer BQDWKTEAj0M_L_FstujSGjqLPp5Py96_Aj5tPmQXQ-zlFPgzd6kpsyhinJx2EFmSiW69VztmJUN8S-jTOVb7MlNJEAYYq8h0DiqTgIU-ZOLD9XVEb8LYdc2nRWjeMuWDn8B4PHBBk0G3X9Kg8rFl2aX2FvtHSbw'
+    })
+  }
+
   SignIn: boolean;
   constructor(private afAuth :AngularFireAuth,private afs :AngularFirestore, private router :Router, private http :HttpClient) {
    this.SignIn = false;
@@ -58,12 +74,7 @@ export class DataService {
   }
 
 
-  integrateArtists: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQAbGGLYZvIEC4TsBY98l4nGjVXIRj1ETkqbHrMpR7bFM8uQkMrcymAFdf_G45HZe_cqQ_WxslAYUPZ9e5_VaeuiEBB2V_LjXn-kdBLZgoWkS7yApPRSeZdwusr2pyCL8X0fP7Cd89m5_jwPl_HoLoyFCEicZQM'
-  })
-  getArtists(){
-  return this.http.get<any>('https://api.spotify.com/v1/artists', {headers: this.integrateArtists})
-  }
+
 
   integratePlayList: HttpHeaders = new HttpHeaders({
   'Authorization': 'Bearer BQD6mrVql6ARk1YV-K5KnE3A8zKdlUwHeFmx8OVrUiTh2HGy2Xy-Vpl1Kn5MqjPdOCr7Px3XDA7D6gpsP9_dVvwuZQSdrVWRBT-bSLZCWr2vxbVdUducFtWZYRAftVgrLNw0GDrDk2J8GTudNdZVxW5F1qzSD1Q'
@@ -79,11 +90,15 @@ export class DataService {
   return this.http.get<any>(`https://api.spotify.com/v1/browse/featured-playlists/${id}`, {headers: this.integratePlayListDetails})
   }
 
-  // search: HttpHeaders = new HttpHeaders({
-  // 'Authorization': 'Bearer BQD6mrVql6ARk1YV-K5KnE3A8zKdlUwHeFmx8OVrUiTh2HGy2Xy-Vpl1Kn5MqjPdOCr7Px3XDA7D6gpsP9_dVvwuZQSdrVWRBT-bSLZCWr2vxbVdUducFtWZYRAftVgrLNw0GDrDk2J8GTudNdZVxW5F1qzSD1Q'
-  // })
-  // getSearch(id: string){
-  // return this.http.get<any>('https://api.spotify.com/v1/search', {headers: this.search})
-  // }
+
+  getAllArtists(searchQuery: any):Observable<any>{
+    let artistUrl = `https://api.spotify.com/v1/search?q=${searchQuery}&type=artist`;
+    return this.http.get<any>(artistUrl, this.httpOption)
+  }
+
+  getArtistDetail(artistsId: any):Observable<any>{
+    let artistDetailUrl = `https://api.spotify.com/v1/artists/${artistsId}`;
+    return this.http.get<any>(artistDetailUrl, this.httpArtist)
+  }
 
 }

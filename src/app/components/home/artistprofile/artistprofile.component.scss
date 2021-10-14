@@ -1,0 +1,70 @@
+.mat-card {
+  margin-bottom: 2rem;
+      height: 140%;
+  .mat-card-avatar {
+   width: 216px;
+  }
+  .card-inner{
+    width: 70%;
+margin-left: 23%;
+  }
+  .mat-card-actions{
+
+      margin-top: 1%;
+
+  }
+
+  .span {
+    background-color: orange;
+    padding: 5px;
+
+  }
+  .type{
+    background-color: #e91e63;
+    padding: 10px 33px;
+    color: white;
+    border-radius: 7%;
+  }
+}
+.column {
+  float: left;
+  width: 15%;
+  padding: 0 10px;
+  margin-bottom: 38px;
+
+  /* Remove extra left and right margins, due to padding */
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 15rem;
+
+    .rounded {
+      display: inline;
+
+    }
+
+    .mat-standard-chip {
+      transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-flex;
+      padding: 13px 9px;
+      border-radius: 16px;
+      align-items: center;
+      cursor: default;
+      min-height: 0;
+      height: 0;
+      background-color: orange !important;
+      font-size: 10px;
+    }
+  }
+}

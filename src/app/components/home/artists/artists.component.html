@@ -1,1 +1,22 @@
-<p>artists works!</p>
+<input type="text" style="margin-left:28%" class="ml-15 rounded" placeholder="Search" name="search" (keyup)="searchArtists()" [(ngModel)]="searchQuery">
+<div style="margin-left:28%" class="main container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex">
+  <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
+  <div class="w-full h-full">
+    <h2 class="h2">Artist</h2>
+    <mat-card *ngFor="let artist of artists " >
+      <div mat-card-avatar class="mb-3">
+        <img src="{{ artist.images[0].url }}" alt="" class="rounded">
+      </div>
+      <mat-card-title><a routerLink="{{artist.id}}">{{artist.name}}</a></mat-card-title>
+      <mat-card-subtitle>Followers: {{artist.followers.total | number }}</mat-card-subtitle>
+      <div   class="flex">
+        <div *ngFor="let genre of artist.genres">
+          <span matBadge="1" matBadgeSize="large" class="span rounded mx-0.5">{{genre}}</span>
+        </div>
+      </div>
+      <mat-card-actions align="end">
+        <button mat-button class="type">{{artist.type}}</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

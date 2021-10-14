@@ -7,13 +7,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./artists.component.scss']
 })
 export class ArtistsComponent implements OnInit {
-
+  public searchQuery: string[] = [];
+  artists: any[] = [];
   constructor(private dataService:DataService, private httpClient:HttpClient) { }
 
   ngOnInit(): void {
-    this.dataService.getArtists().subscribe((data:any) =>{
-      console.log(data);
-    })
+
   }
+
+
+    public searchArtists(){
+     this.dataService.getAllArtists(this.searchQuery).subscribe(data => {
+      this.artists =  data.artists.items;
+      console.log(this.artists);
+     });
+    }
 
 }

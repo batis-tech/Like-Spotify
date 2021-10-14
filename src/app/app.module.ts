@@ -8,13 +8,13 @@ import { HomeComponent } from './components/home/home.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LandingComponent } from './components/landing/landing.component';
-import { ProfileComponent } from './components/profile/profile.component';
+
 import { HeaderComponent } from './components/landing/header/header.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { BannerComponent } from './components/landing/banner/banner.component';
 import { FeatureComponent } from './components/landing/feature/feature.component';
 import { FooterComponent } from './components/landing/footer/footer.component';
-
+import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -31,12 +31,16 @@ import { HomeHeaderComponent } from './components/home/header/header.component';
 import { MusicsComponent } from './components/home/musics/musics.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ArtistsComponent } from './components/home/artists/artists.component';
+
 import { PlaylistComponent } from './components/home/playlist/playlist.component';
 import { AllListComponent } from './components/home/playlist/all-list/all-list.component';
 import { PListComponent } from './components/home/playlist/p-list/p-list.component';
 import { PlaylistdetailsComponent } from './components/home/playlist/p-list/playlistdetails/playlistdetails.component';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ArtistprofileComponent } from './components/home/artistprofile/artistprofile.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +48,6 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     SigninComponent,
     SignupComponent,
     LandingComponent,
-    ProfileComponent,
     HeaderComponent,
     BannerComponent,
     FeatureComponent,
@@ -57,6 +60,9 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     AllListComponent,
     PListComponent,
     PlaylistdetailsComponent,
+    ArtistprofileComponent,
+
+
 
 
   ],
@@ -75,7 +81,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     AngularFireDatabaseModule,
     HttpClientModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

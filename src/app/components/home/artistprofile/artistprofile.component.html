@@ -1,0 +1,35 @@
+<div style="margin-left:28%" class="main container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex">
+  <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
+  <div class="w-full h-full">
+
+    <mat-card >
+      <div mat-card-avatar class="mb-3">
+        <img src="{{ artists.images[0].url }}" alt="" class="rounded">
+      </div>
+      <div class="card-inner">
+      <mat-card-title><a>{{ artists.name }}</a></mat-card-title>
+      <mat-card-subtitle>Followers:{{artists.followers.total |  number}}</mat-card-subtitle>
+      <mat-card-subtitle>Popularity: {{ artists.popularity }}</mat-card-subtitle>
+      <div   class="flex">
+        <div *ngFor="let genre of artists.genres">
+          <span matBadge="1" matBadgeSize="large" class="span rounded mx-0.5">{{genre}}</span>
+        </div>
+      </div>
+      <mat-card-actions align="end">
+        <button mat-button class="type">{{artists.type}}</button>
+      </mat-card-actions>
+    </div>
+    </mat-card>
+    <br>
+
+    <div >
+        <div class="column flex-1">
+          <div class="card justify-center items-center">
+            <img src="" class="rounded mb-3" width="180">
+            <h2>test</h2>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -39,8 +39,10 @@ import { PlaylistdetailsComponent } from './components/home/playlist/p-list/play
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ArtistprofileComponent } from './components/home/artistprofile/artistprofile.component';
+import { TracksComponent } from './components/home/tracks/tracks.component';
+import { PlaytracksComponent } from './components/home/playtracks/playtracks.component';
 
-
+import { VimeModule } from '@vime/angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +63,8 @@ import { ArtistprofileComponent } from './components/home/artistprofile/artistpr
     PListComponent,
     PlaylistdetailsComponent,
     ArtistprofileComponent,
+    TracksComponent,
+    PlaytracksComponent,
 
 
 
@@ -82,7 +86,8 @@ import { ArtistprofileComponent } from './components/home/artistprofile/artistpr
     HttpClientModule,
     MatChipsModule,
     MatAutocompleteModule,
-    MatCardModule
+    MatCardModule,
+    VimeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

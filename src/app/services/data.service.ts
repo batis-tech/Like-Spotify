@@ -12,7 +12,7 @@ export class DataService {
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQBfTRBCVUmIMtV5TXyrICM_tchXKLHFxVU4CVfN5eFPfP5g1HASgiNFfEDbmdLVKSfwTgUjt487ofm30nXFR24ENGmdgKgWA7ULuYs_CBSULW26Wai1lnCUl2xekWAyuDYi4agq86YT4sRSpbgu8-o0ZecdYAc'
+    'Authorization': 'Bearer BQC5twkON5tTxDX-KZAKI8k-MqO3zNm-WizTb5Fh_1hMpWpvkBeZwdwDJkzRlIhbA8m24zONzLjk1j70mZAM5ADyoj1-bZl1rpcZ2x-KOURfdcJTxoginjzBqHPObZ0Ac8soOobVKoWpv6u6dMy5YmqRIiP6d8c'
     })
   }
 
@@ -20,7 +20,35 @@ export class DataService {
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQDWKTEAj0M_L_FstujSGjqLPp5Py96_Aj5tPmQXQ-zlFPgzd6kpsyhinJx2EFmSiW69VztmJUN8S-jTOVb7MlNJEAYYq8h0DiqTgIU-ZOLD9XVEb8LYdc2nRWjeMuWDn8B4PHBBk0G3X9Kg8rFl2aX2FvtHSbw'
+    'Authorization': 'Bearer BQDZ5CmRi-3JuLzfRYHFMa7R6jSNCthCTXBpGrVLtdeElLN7KDV3ramttf-P1zWWQzNqHRV3GN8SVC-Nw_ulsNn5n7UzgzckZX_LPLEpOJS3bNHbeOYZuElCcClkAqFEYaPGYxaiRMt5SAAHPjPZCRbIzC80Mes'
+    })
+  }
+  private httpArtistAlbum ={
+    headers : new HttpHeaders({
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer BQBlwAXaLxUJvZhX-yU9Ay7YZMTcrBA85P-Y-0JZfqbP7RAYbpgoOiI_RzWp2mtWbu0eP8qTEt1w_XXLwiUaULjbF4NT-iZlOGh3Y1cY6SeA5ooB9AhR2oZJffsJKwi155A_m3cyvW_iQkmD1PsS8c4kmxW1wEM'
+    })
+  }
+  private httpArtistAlbumTracks ={
+    headers : new HttpHeaders({
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer BQDCf_rPWsnd_Y_YDdVefFL10QEcOmHKlHhD2u2c6XkzJzD1j8Htkyo-LzrDB05K1-0NWl27kXzE0L47DwvtgyBtgue_v0rXyIkXoRg99OkBC9yn51V1W3mhNXIFgvIUgyxim5RNlbRqKJWdQLzgXB9FipyEg5E'
+    })
+  }
+  private httpArtistAlbumDetails ={
+    headers : new HttpHeaders({
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer BQB_jxVoLQJHgwaXbWo8HCdTb7IUR4nbfTHJ0Mvn3x4fFlJdSitDRrQFQiQU-J7k-yR-ITAHUl7s-pO9OhZCFaCL70Kz3woCYtyFYJuZZwpIvykv4gOpwYo38ajz1n75tAhBfH3sNzSqJGYcbtwqM8PjFiXeDPM'
+    })
+  }
+  private httpPlayTracks ={
+    headers : new HttpHeaders({
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer BQC-x64nOSnG1b09prhRu5JwmBmdHX3pWoFvKgDcbUfwJshxIj2a_LkWY_GR3sFciIDx91A8lW4mfRAxSbUS-HAu7WoH5_nLjzrLYicbPDkSm3z9HUBSNgULJsS4aOx3mE0b3hMuxyhgctHlTvc77x__JElRYzA'
     })
   }
 
@@ -99,6 +127,22 @@ export class DataService {
   getArtistDetail(artistsId: any):Observable<any>{
     let artistDetailUrl = `https://api.spotify.com/v1/artists/${artistsId}`;
     return this.http.get<any>(artistDetailUrl, this.httpArtist)
+  }
+  getArtistAlbum(artistsId:any):Observable<any>{
+    let artistAlbum =`https://api.spotify.com/v1/artists/${artistsId}/albums`;
+     return this.http.get<any>(artistAlbum, this.httpArtistAlbum)
+  }
+  getArtistAlbumDetails(albumId:any):Observable<any>{
+    let artistAlbumDetails =`https://api.spotify.com/v1/albums/${albumId}`;
+     return this.http.get<any>(artistAlbumDetails, this.httpArtistAlbumDetails)
+  }
+  getArtistAlbumTracks(albumId:any):Observable<any>{
+    let artistAlbumTracks =`https://api.spotify.com/v1/albums/${albumId}/tracks`;
+     return this.http.get<any>(artistAlbumTracks, this.httpArtistAlbumTracks)
+  }
+  playtrack(trackId:any):Observable<any>{
+    let playTracks =`	https://api.spotify.com/v1/tracks/${trackId}`;
+     return this.http.get<any>(playTracks, this.httpPlayTracks)
   }
 
 }

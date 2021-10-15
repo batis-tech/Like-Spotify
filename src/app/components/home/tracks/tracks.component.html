@@ -1,0 +1,70 @@
+<div style="margin-left:28%" class="main container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 ">
+  <mat-card >
+    <div mat-card-avatar class="mb-3">
+      <img src="{{ artists.images[0].url }}" alt="" class="rounded">
+    </div>
+    <div class="card-inner">
+    <mat-card-title><a>{{ artists.name }}</a></mat-card-title>
+    <mat-card-subtitle>Tracks: {{artists.total_tracks}}</mat-card-subtitle>
+    <mat-card-subtitle>Release date: {{ artists.release_date }}</mat-card-subtitle>
+    <div   class="flex">
+
+    </div>
+    <mat-card-actions align="end">
+      <!-- <button mat-button class="type">{{artists.type}}</button> -->
+    </mat-card-actions>
+  </div>
+  </mat-card>
+  <table class="min-w-full divide-y divide-gray-200 flex-1">
+           <thead class="bg-gray-50">
+             <tr>
+               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                 Song
+               </th>
+
+               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+
+               </th>
+               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+
+               </th>
+               <th scope="col" class="relative px-6 py-3">
+                 <span class="sr-only">Edit</span>
+               </th>
+             </tr>
+           </thead>
+           <tbody class="bg-white divide-y divide-gray-200">
+             <tr *ngFor="let track of tracks ">
+               <td class="px-6 py-4 whitespace-nowrap">
+                 <div class="flex items-center">
+                   <div class="flex-shrink-0 h-10 w-10">
+                     <img class="h-10 w-10 rounded-full" [src]="artists.images[0].url" alt="">
+                   </div>
+                   <div class="ml-4">
+                     <div class="text-sm font-medium text-gray-900">
+                       {{track.name}}
+                     </div>
+                     <div class="text-sm text-gray-500">
+                       {{track.artists[0].name }}
+                     </div>
+                   </div>
+                 </div>
+               </td>
+               <td class="px-6 py-4 whitespace-nowrap">
+
+               </td>
+               <td class="px-6 py-4 whitespace-nowrap">
+
+               </td>
+               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+
+               </td>
+               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                 <a routerLink="{{track.id}}" class="text-indigo-600 hover:text-indigo-900">Play</a>
+               </td>
+             </tr>
+
+             <!-- More people... -->
+           </tbody>
+         </table>
+</div>

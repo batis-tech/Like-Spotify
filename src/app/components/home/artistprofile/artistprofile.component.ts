@@ -12,15 +12,21 @@ export class ArtistprofileComponent implements OnInit {
 
   artistsId: any[] = [];
   artists: any;
+  album: any;
 
   ngOnInit(): void {
     this.activatedroute.paramMap.subscribe((params:Params)=>{
       this.artistsId =params.get('id');
       console.log(params.get('id'));
     })
+
     this.dataService.getArtistDetail(this.artistsId).subscribe(data =>{
       this.artists = data ;
       console.log(data);
+    })
+    this.dataService.getArtistAlbum(this.artistsId).subscribe(data =>{
+      this.album = data.items;
+      console.log(data.items.name);
 
     })
 

@@ -11,7 +11,8 @@ import { MusicsComponent } from './components/home/musics/musics.component';
 import { PlaylistdetailsComponent } from './components/home/playlist/p-list/playlistdetails/playlistdetails.component';
 import { ArtistsComponent } from './components/home/artists/artists.component';
 import { ArtistprofileComponent } from './components/home/artistprofile/artistprofile.component';
-
+import { TracksComponent } from './components/home/tracks/tracks.component';
+import { PlaytracksComponent } from './components/home/playtracks/playtracks.component';
 const routes: Routes = [
   {path:'', redirectTo: 'landing', pathMatch:'full'},
   {path:'home',component:HomeComponent,canActivate:[DataGuard],children:[
@@ -23,6 +24,9 @@ const routes: Routes = [
   {path:'sign-in',component:SigninComponent},
   {path:'sign-up',component:SignupComponent},
   {path:'artists/:id',component:ArtistprofileComponent},
+  {path:'artists/:id/albums/:id/tracks',component:TracksComponent},
+  {path:'artists/:id/albums/:id/tracks/:id',component:PlaytracksComponent}
+
 ]},
 ];
 

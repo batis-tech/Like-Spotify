@@ -2,7 +2,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+// Default theme. ~960B
+@import '@vime/core/themes/default.css';
 
+// Optional light theme (extends default). ~400B
+@import '@vime/core/themes/light.css';
 $background: #262626;
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}

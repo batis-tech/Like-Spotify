@@ -15,10 +15,11 @@ import { TracksComponent } from './components/home/tracks/tracks.component';
 import { PlaytracksComponent } from './components/home/playtracks/playtracks.component';
 const routes: Routes = [
   {path:'', redirectTo: 'landing', pathMatch:'full'},
+  {path:'landing',component:LandingComponent},
   {path:'home',component:HomeComponent,canActivate:[DataGuard],children:[
-    {path:'featured-playlists',component:PListComponent,children:[
-          {path:':id',component:PlaylistdetailsComponent}
-    ]},
+  {path:'featured-playlists',component:PListComponent,children:[
+  {path:':id',component:PlaylistdetailsComponent}
+   ]},
   {path:'songs',component:MusicsComponent},
   {path:'artists',component:ArtistsComponent},
   {path:'sign-in',component:SigninComponent},
@@ -26,8 +27,7 @@ const routes: Routes = [
   {path:'artists/:id',component:ArtistprofileComponent},
   {path:'artists/:id/albums/:id/tracks',component:TracksComponent},
   {path:'artists/:id/albums/:id/tracks/:id',component:PlaytracksComponent}
-
-]},
+  ]},
 ];
 
 @NgModule({

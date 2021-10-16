@@ -1,8 +1,16 @@
 .mat-card {
   margin-bottom: 2rem;
       height: 140%;
+      background: #181818;
+      color: white;
+    &-subtitle:not(:first-child) {
+    margin-top: -4px;
+    color: white;
+}
   .mat-card-avatar {
    width: 216px;
+   background: #181818;
+   color: white;
   }
   .card-inner{
     width: 70%;
@@ -15,7 +23,7 @@ margin-left: 23%;
   }
 
   .span {
-    background-color: orange;
+    background-color: #e92f63;
     padding: 5px;
 
   }
@@ -28,7 +36,7 @@ margin-left: 23%;
 }
 .column {
   float: left;
-  width: 15%;
+  width: 25%;
   padding: 0 10px;
   margin-bottom: 38px;
 
@@ -47,8 +55,9 @@ margin-left: 23%;
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    height: 15rem;
-
+    height: 18rem;
+    background: #181818;
+    color: white;
     .rounded {
       display: inline;
 

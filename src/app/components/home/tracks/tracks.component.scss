@@ -1,28 +1,65 @@
 .mat-card {
   margin-bottom: 2rem;
-      height: 140%;
+  height: 140%;
+  background: #181818;
+  color: white;
+
+  &-subtitle:not(:first-child) {
+    margin-top: -4px;
+    color: white;
+  }
+
   .mat-card-avatar {
-   width: 216px;
+    width: 216px;
   }
-  .card-inner{
+
+  .card-inner {
     width: 70%;
-margin-left: 23%;
+    margin-left: 23%;
   }
-  .mat-card-actions{
 
-      margin-top: 1%;
-
+  .mat-card-actions {
+    margin-top: 1%;
   }
 
   .span {
     background-color: orange;
     padding: 5px;
-
   }
-  .type{
+
+  .type {
     background-color: #e91e63;
     padding: 10px 33px;
     color: white;
     border-radius: 7%;
+  }
+}
+
+.table {
+  background-color: #121212;
+
+  .thead {
+    background-color: #121212;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+  }
+
+  .body {
+    background-color: #121212;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+
+    .tr {
+      color: white;
+      border: 2px solid #7f183b;
+      border: none;
+    }
+
+    .btn {
+      background-color: #e91e63;
+      padding: 10px 33px;
+      color: white;
+      border-radius: 7%;
+    }
   }
 }

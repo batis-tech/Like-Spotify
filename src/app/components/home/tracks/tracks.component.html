@@ -15,9 +15,9 @@
     </mat-card-actions>
   </div>
   </mat-card>
-  <table class="min-w-full divide-y divide-gray-200 flex-1">
-           <thead class="bg-gray-50">
-             <tr>
+  <table class="min-w-full divide-y divide-gray-200 flex-1 table">
+           <thead class="bg-gray-50 thead">
+             <tr >
                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                  Song
                </th>
@@ -33,15 +33,15 @@
                </th>
              </tr>
            </thead>
-           <tbody class="bg-white divide-y divide-gray-200">
-             <tr *ngFor="let track of tracks ">
+           <tbody class="bg-white divide-y divide-gray-200 body">
+             <tr *ngFor="let track of tracks tr">
                <td class="px-6 py-4 whitespace-nowrap">
                  <div class="flex items-center">
                    <div class="flex-shrink-0 h-10 w-10">
                      <img class="h-10 w-10 rounded-full" [src]="artists.images[0].url" alt="">
                    </div>
                    <div class="ml-4">
-                     <div class="text-sm font-medium text-gray-900">
+                     <div class="text-sm font-medium text-gray-900 text-white" style="color:white">
                        {{track.name}}
                      </div>
                      <div class="text-sm text-gray-500">
@@ -60,7 +60,7 @@
 
                </td>
                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                 <a routerLink="{{track.id}}" class="text-indigo-600 hover:text-indigo-900">Play</a>
+                 <a routerLink="{{track.id}}" class="text-indigo-600 hover:text-indigo-900 btn">Play</a>
                </td>
              </tr>
 

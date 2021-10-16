@@ -7,6 +7,6 @@
 
 // Optional light theme (extends default). ~400B
 @import '@vime/core/themes/light.css';
-$background: #262626;
-html, body { height: 100%; }
+$background: #121212;
+html, body { height: 100%; background: $background}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}

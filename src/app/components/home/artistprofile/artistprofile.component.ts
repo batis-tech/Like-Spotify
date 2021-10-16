@@ -26,7 +26,7 @@ export class ArtistprofileComponent implements OnInit {
     })
     this.dataService.getArtistAlbum(this.artistsId).subscribe(data =>{
       this.album = data.items;
-      console.log(data.items.name);
+      console.log(data);
 
     })
 

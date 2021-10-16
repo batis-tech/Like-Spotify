@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LandingComponent } from './components/landing/landing.component';
-
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { HeaderComponent } from './components/landing/header/header.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { BannerComponent } from './components/landing/banner/banner.component';
@@ -87,7 +87,8 @@ import { VimeModule } from '@vime/angular';
     MatChipsModule,
     MatAutocompleteModule,
     MatCardModule,
-    VimeModule
+    VimeModule,
+    NgxAudioPlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

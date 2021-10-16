@@ -1,8 +1,14 @@
 .mat-card {
   margin-bottom: 2rem;
 
+  background: #181818;
+  color: white;
+  &-subtitle{
+
+    color: white;
+}
   .span {
-    background-color: orange;
+        background-color: #e92f63;
     padding: 5px;
 
   }

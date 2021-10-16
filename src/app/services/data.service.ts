@@ -12,7 +12,7 @@ export class DataService {
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQC5twkON5tTxDX-KZAKI8k-MqO3zNm-WizTb5Fh_1hMpWpvkBeZwdwDJkzRlIhbA8m24zONzLjk1j70mZAM5ADyoj1-bZl1rpcZ2x-KOURfdcJTxoginjzBqHPObZ0Ac8soOobVKoWpv6u6dMy5YmqRIiP6d8c'
+    'Authorization': 'Bearer BQCFauSMPQRM8PJK31Og4pNN5cUE-cIb4jJpBzJ3poUhYEmo1wLgXy3vjoA0kZFs8RHPR10lclEJJ8UVmMIYQCKXrXU2bQ7kL_396mCDewf7tmkpIPTqf4BQe9to7cI3jyyu_hISkTULVBTm-EDHquHtLSmvyrk'
     })
   }
 
@@ -20,35 +20,35 @@ export class DataService {
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQDZ5CmRi-3JuLzfRYHFMa7R6jSNCthCTXBpGrVLtdeElLN7KDV3ramttf-P1zWWQzNqHRV3GN8SVC-Nw_ulsNn5n7UzgzckZX_LPLEpOJS3bNHbeOYZuElCcClkAqFEYaPGYxaiRMt5SAAHPjPZCRbIzC80Mes'
+    'Authorization': 'Bearer BQCXrwedd95MfR-fJWhnXVrxlYCK9x_o5zG-1ByayS_bj7JORNKM9BfE58MJMXFp6j-xDJG1EoDOBg93YIdM8dljOgPWRJINGhgbVWRF2fBnfSzVItqkOwb2hcLNgIMZPMqM2JEdScwYDuMGRgt8HZzSK2ikCGY'
     })
   }
   private httpArtistAlbum ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQBlwAXaLxUJvZhX-yU9Ay7YZMTcrBA85P-Y-0JZfqbP7RAYbpgoOiI_RzWp2mtWbu0eP8qTEt1w_XXLwiUaULjbF4NT-iZlOGh3Y1cY6SeA5ooB9AhR2oZJffsJKwi155A_m3cyvW_iQkmD1PsS8c4kmxW1wEM'
+    'Authorization': 'Bearer BQBT9irLtYDOZW9uJs5b405Jc31zBwObNtRJ1ROEqzhBAQ68NxmybM6xF7oQYWQrOeNOGYorTeWzYe95bBcrWxupWudG-PhzYxveLOixOtin3fvMHFOWjXICap8qXSevrPYzXMfs-ZrRLP-tSjIMZMmh8yddlEw'
     })
   }
   private httpArtistAlbumTracks ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQDCf_rPWsnd_Y_YDdVefFL10QEcOmHKlHhD2u2c6XkzJzD1j8Htkyo-LzrDB05K1-0NWl27kXzE0L47DwvtgyBtgue_v0rXyIkXoRg99OkBC9yn51V1W3mhNXIFgvIUgyxim5RNlbRqKJWdQLzgXB9FipyEg5E'
+    'Authorization': 'Bearer BQDR7IYiKGnw0Q6i7cULep37EnpWqITWSVCgxzOMl3JJkG1ZLHyu1_HVKtONvp6p1wy8DJmf3ibvuhZlaKJzVoWag5E3h6OYV_AUfBhr2N3NBnvYWEjlSYUdMy3GFwuO7hiIXIECxfuj3tL0WbpLuJzmIbyMEk8'
     })
   }
   private httpArtistAlbumDetails ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQB_jxVoLQJHgwaXbWo8HCdTb7IUR4nbfTHJ0Mvn3x4fFlJdSitDRrQFQiQU-J7k-yR-ITAHUl7s-pO9OhZCFaCL70Kz3woCYtyFYJuZZwpIvykv4gOpwYo38ajz1n75tAhBfH3sNzSqJGYcbtwqM8PjFiXeDPM'
+    'Authorization': 'Bearer BQASqK-cTPfnhTGbSUE1OsJMQkBIOwuFOJBgBHbH5l8VowOmnWMwaMYap6E22b6pM799Yi7jVXNXsHw0VXmi_c3c9BXWFIB5TuguttoyfxcsvjnJZvG3CCjHNQPMh6DdIZ_RFo88ZuXE0rPdyE1T5aHAGilOAQ8'
     })
   }
   private httpPlayTracks ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQC-x64nOSnG1b09prhRu5JwmBmdHX3pWoFvKgDcbUfwJshxIj2a_LkWY_GR3sFciIDx91A8lW4mfRAxSbUS-HAu7WoH5_nLjzrLYicbPDkSm3z9HUBSNgULJsS4aOx3mE0b3hMuxyhgctHlTvc77x__JElRYzA'
+    'Authorization': 'Bearer BQDR12jC4Em8LnS2-kO4MJSeQbgIj1gYf2D35ts3Me5l6oOj_ih7wiMYM-zKqoKAIjlrr8NSr4EhOJIyZ8g_tNDWSBp3TH5_jPfq54NTQ9Tm7lhk5uObmsKHOci9VHtHFv4ruBLbeyEB20CEPEAB0eCwyHIl64w'
     })
   }
 

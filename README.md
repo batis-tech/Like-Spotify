@@ -5,14 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Be aware that the app relies on spoitfy API which only allows third party apps to play 15 thousand tracks daily. When the rate limit is reached all users are blocked from playing/streaming tracks. The stream will be re-enable one day after (at the same time) streams were blocked.
 
 # featuers
-- Signup,sign-in useing Firebase as the provider service (NoSQL)
-No need to install
-Native media keyboard shortcuts
-Search for new songs,artist and latest release songs
-Easy navigation
-Listen to songs from your Stream, Likes, Tracks, Following or Playlists
-Full playlist feature
-Follow/Unfollow users
+- Signup,sign-in useing Firebase as the provider service (NoSQL). 
+- No need to install. 
+- Native media keyboard shortcuts.
+- Search for new songs,artist and latest release songs
+- Easy navigation
+- Listen to songs from your Stream, Likes, Tracks, Following or Playlists
+- Full playlist feature
+- Follow/Unfollow users
+
 ## Configuration
 Since Spotify applies a rate limit to third party apps, you need to configure your own API key to make spotify wor, you only need to navigate to services folder in data.serice file to apply you OAuth token api
 ## Development server

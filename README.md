@@ -13,7 +13,7 @@ Be aware that the app relies on spotify API which only allows third party apps t
 - Full playlist feature
 
 ## Configuration
-Since Spotify applies a rate limit to third party apps, you need to configure your own API key to make spotify wor, you only need to navigate to services folder in data.serice file to apply you OAuth token api
+Since Spotify applies a rate limit to third party apps, you need to configure your own API key to make spotify work, you only need to navigate to services folder in data.service file to apply you OAuth token api
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

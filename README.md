@@ -1,8 +1,8 @@
-# Like spoitfy 
+# Like spotify 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
-Be aware that the app relies on spoitfy API which only allows third party apps to play 15 thousand tracks daily. When the rate limit is reached all users are blocked from playing/streaming tracks. The stream will be re-enable one day after (at the same time) streams were blocked.
+Be aware that the app relies on spotify API which only allows third party apps to play 15 thousand tracks daily. When the rate limit is reached all users are blocked from playing/streaming tracks. The stream will be re-enable one day after (at the same time) streams were blocked.
 
 # featuers
 - Signup,sign-in useing Firebase as the provider service (NoSQL). 

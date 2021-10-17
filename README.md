@@ -10,9 +10,7 @@ Be aware that the app relies on spotify API which only allows third party apps t
 - Native media keyboard shortcuts.
 - Search for new songs,artist and latest release songs
 - Easy navigation
-- Listen to songs from your Stream, Likes, Tracks, Following or Playlists
 - Full playlist feature
-- Follow/Unfollow users
 
 ## Configuration
 Since Spotify applies a rate limit to third party apps, you need to configure your own API key to make spotify wor, you only need to navigate to services folder in data.serice file to apply you OAuth token api

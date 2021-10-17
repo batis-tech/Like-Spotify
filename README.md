@@ -1,6 +1,6 @@
 # Like spotify 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3 and Firebase as a real-time NoSQL cloud database.
 
 Be aware that the app relies on spotify API which only allows third party apps to play 15 thousand tracks daily. When the rate limit is reached all users are blocked from playing/streaming tracks. The stream will be re-enable one day after (at the same time) streams were blocked.
 

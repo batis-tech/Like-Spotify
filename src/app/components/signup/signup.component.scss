@@ -1,3 +1,17 @@
-.help-block{
-  color: red
+.pop-up {
+
+  .help-block {
+    color: red;
+  }
+  .button{
+    background-color: #1bb26b;
+    color: black;
+  }
+  .input{
+    width: 17rem;
+margin-bottom: 0rem;
+  }
+  .mat-dialog-container {
+    background: black;
+  }
 }

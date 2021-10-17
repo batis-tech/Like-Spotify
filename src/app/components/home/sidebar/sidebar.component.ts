@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AngularFireAuth } from "@angular/fire/compat/auth";
+import { AngularFirestore, AngularFirestoreDocument } from "@angular/fire/compat/firestore";
+import { Observable } from "rxjs";
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth, private firestore: AngularFirestore) { }
 
   ngOnInit(): void {
   }
-
+  logout(){
+    this.afAuth.signOut();
+  }
 }

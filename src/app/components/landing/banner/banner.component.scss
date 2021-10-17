@@ -1,0 +1,21 @@
+.banner {
+  background: #1bb26b;
+
+  .banner-inner {
+    background: transparent;
+
+    .span-white {
+      color: white;
+    }
+
+    .main {
+      background: black;
+      color: #1bb26b;
+    }
+
+    .secondary {
+      color: black;
+      background: #1bb26b;
+    }
+  }
+}

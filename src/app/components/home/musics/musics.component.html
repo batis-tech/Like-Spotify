@@ -4,14 +4,14 @@
 <div class="container mx-auto py-10 h-64 md:w-5/5 w-12/12 px-1 flex " style=" margin-left: 28%;">
   <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
   <div class="w-full h-full">
-    <h2 >New Releases</h2>
+    <h2 style="color: #2ed075">New Releases</h2>
     <div *ngFor="let r of releases ; let i = index">
         <div class="column flex-1">
           <div class="card justify-center items-center">
             <img [src]="r.images[0].url" class="rounded mb-3" width="180">
 
-            <h3 class="text-left" *ngIf="r.name.length >9 ">{{ r.name.substring(0, 9) }}.....</h3>
-            <h3 class="text-left" *ngIf="r.name.length <= 9 ">{{ r.name.substring(0, 9) }}</h3>
+            <h3 class="text-left" *ngIf="r.name.length >15 ">{{ r.name.substring(0, 15) }}.....</h3>
+            <h3 class="text-left" *ngIf="r.name.length <= 15 ">{{ r.name.substring(0, 15) }}</h3>
 
             <mat-chip-list class="example-chip">
               <mat-chip class="example-box" >

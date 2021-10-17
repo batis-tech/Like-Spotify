@@ -23,10 +23,10 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.dataService.SignIn) {                       // if the user's logged in, navigate them to the dashboard (NOTE: don't use afAuth.currentUser -- it's never null)
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['home']);
 
       }else{
-        this.router.navigate(['/landing']);
+        this.router.navigate(['landing']);
       }
   }
 
@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
     const newUser = new UsersData(value.firstName, value.lastName, value.email, value.password);
     this.dataService.signUp(newUser).then((result)=>{
       if(result == null){
-        this.router.navigate(['/home']);
+        this.router.navigate(['home']);
          this.dialogRef.close();
       }else if( result.isValid == false){
         this.firebaseErrorMessage = result.message;

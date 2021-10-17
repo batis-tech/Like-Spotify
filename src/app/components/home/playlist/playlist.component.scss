@@ -1,15 +1,12 @@
-
-
-  .h2{
-    margin: 0px!important;
-  }
+.h2 {
+  margin: 0;
+}
 
 .column {
   float: left;
-  width: 15%;
+  width: 25%;
   padding: 0 10px;
-  background: #181818;
-  color: white;
+  margin-bottom: 38px;
   /* Remove extra left and right margins, due to padding */
   /* Responsive columns */
   @media screen and (max-width: 600px) {
@@ -25,11 +22,12 @@
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    height: 15rem;
+    height: 18rem;
+    background: #181818;
+    color: white;
 
     .rounded {
       display: inline;
-
     }
 
     .mat-standard-chip {
@@ -41,7 +39,7 @@
       cursor: default;
       min-height: 0;
       height: 0;
-      background-color: orange !important;
+      background-color: #2ed075 !important;
       font-size: 10px;
     }
   }

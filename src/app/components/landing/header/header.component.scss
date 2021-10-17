@@ -1,3 +1,14 @@
-.button{
-  cursor: pointer;
+.header{
+  background: black;
+  .header-inner{
+    border: none;
+  }
+  .button{
+    cursor: pointer;
+    background-color: #1bb26b;
+    color: black;
+  }
+  .btn{
+    color:#1bb26b
+  }
 }

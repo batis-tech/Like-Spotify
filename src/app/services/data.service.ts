@@ -12,7 +12,7 @@ export class DataService {
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQCFauSMPQRM8PJK31Og4pNN5cUE-cIb4jJpBzJ3poUhYEmo1wLgXy3vjoA0kZFs8RHPR10lclEJJ8UVmMIYQCKXrXU2bQ7kL_396mCDewf7tmkpIPTqf4BQe9to7cI3jyyu_hISkTULVBTm-EDHquHtLSmvyrk'
+    'Authorization': 'Bearer add OAuth Token here '
     })
   }
 
@@ -20,35 +20,35 @@ export class DataService {
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQCXrwedd95MfR-fJWhnXVrxlYCK9x_o5zG-1ByayS_bj7JORNKM9BfE58MJMXFp6j-xDJG1EoDOBg93YIdM8dljOgPWRJINGhgbVWRF2fBnfSzVItqkOwb2hcLNgIMZPMqM2JEdScwYDuMGRgt8HZzSK2ikCGY'
+    'Authorization': 'add OAuth Token here '
     })
   }
   private httpArtistAlbum ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQBT9irLtYDOZW9uJs5b405Jc31zBwObNtRJ1ROEqzhBAQ68NxmybM6xF7oQYWQrOeNOGYorTeWzYe95bBcrWxupWudG-PhzYxveLOixOtin3fvMHFOWjXICap8qXSevrPYzXMfs-ZrRLP-tSjIMZMmh8yddlEw'
+    'Authorization': 'Bearer add OAuth Token here '
     })
   }
   private httpArtistAlbumTracks ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQDR7IYiKGnw0Q6i7cULep37EnpWqITWSVCgxzOMl3JJkG1ZLHyu1_HVKtONvp6p1wy8DJmf3ibvuhZlaKJzVoWag5E3h6OYV_AUfBhr2N3NBnvYWEjlSYUdMy3GFwuO7hiIXIECxfuj3tL0WbpLuJzmIbyMEk8'
+    'Authorization': 'add OAuth Token here '
     })
   }
   private httpArtistAlbumDetails ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQASqK-cTPfnhTGbSUE1OsJMQkBIOwuFOJBgBHbH5l8VowOmnWMwaMYap6E22b6pM799Yi7jVXNXsHw0VXmi_c3c9BXWFIB5TuguttoyfxcsvjnJZvG3CCjHNQPMh6DdIZ_RFo88ZuXE0rPdyE1T5aHAGilOAQ8'
+    'Authorization': 'add OAuth Token here '
     })
   }
   private httpPlayTracks ={
     headers : new HttpHeaders({
     'Accept' : 'application/json',
     'Content-Type' : 'application/json',
-    'Authorization': 'Bearer BQDR12jC4Em8LnS2-kO4MJSeQbgIj1gYf2D35ts3Me5l6oOj_ih7wiMYM-zKqoKAIjlrr8NSr4EhOJIyZ8g_tNDWSBp3TH5_jPfq54NTQ9Tm7lhk5uObmsKHOci9VHtHFv4ruBLbeyEB20CEPEAB0eCwyHIl64w'
+    'Authorization': 'Bearer add OAuth Token here '
     })
   }
 
@@ -92,10 +92,35 @@ export class DataService {
       })
   }
 
-
+  loginUser(email: string, password: string):Promise<any>{
+      return this.afAuth.signInWithEmailAndPassword(email, password).then(() => {
+        console.log('Auth Service: loginUser: sucess');
+        this.router.navigate(['/home']);
+      })
+      // .catch(error => {
+      //   console.log('Auth Service: login error...');
+      //   console.log('erorr code', error.code);
+      //   console.log('error', error);
+      //   if (error.code)
+      //      return {isValid: false, message: error.message}
+      // });
+    }
+    logoutUser(): Promise<void> {
+    return this.afAuth.signOut()
+        .then(() => {
+            this.router.navigate(['landing']);                    // when we log the user out, navigate them to home
+        })
+        // .catch(error => {
+        //     console.log('Auth Service: logout error...');
+        //     console.log('error code', error.code);
+        //     console.log('error', error);
+        //     if (error.code)
+        //         return error;
+        // });
+}
 
   integrate: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQBEZ9d9u30n9xb9--S0PziIjoBTmM_oq813ZdjUOQAwqL2oH0OIF4DRbEGMh9wjuVWRRneRsZQTk6QhmI-7HLVRWjsu73qDosSmg7ZYNf5ZTjD4UEfFR8CpWGl40qZpIBPfjJT24JK8RwMW3GxoXV416TNG7d4'
+  'Authorization': 'add OAuth Token here '
   })
   getNewRelease(){
   return this.http.get<any>('https://api.spotify.com/v1/browse/new-releases', {headers: this.integrate})
@@ -105,14 +130,14 @@ export class DataService {
 
 
   integratePlayList: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQD6mrVql6ARk1YV-K5KnE3A8zKdlUwHeFmx8OVrUiTh2HGy2Xy-Vpl1Kn5MqjPdOCr7Px3XDA7D6gpsP9_dVvwuZQSdrVWRBT-bSLZCWr2vxbVdUducFtWZYRAftVgrLNw0GDrDk2J8GTudNdZVxW5F1qzSD1Q'
+  'Authorization': 'add OAuth Token here '
   })
   getPlaylist(){
   return this.http.get<any>('https://api.spotify.com/v1/browse/featured-playlists', {headers: this.integratePlayList})
   }
 
   integratePlayListDetails: HttpHeaders = new HttpHeaders({
-  'Authorization': 'Bearer BQAL-MGVm0Dc3TTnUex_BvW0SvVPfuQ1o0jV-_2sy-zZaBZYXREQ9VPGZjvebnt01FYAJZVE-_ikgRMjM_dY3yT6jsxZI7C_B1P3ohXZziug-IStF6fkNJuR8oW9vhqPkFd2hxoC9wtFhlEpHq7Faobb3CvHYwM'
+  'Authorization': 'add OAuth Token here '
   })
   getPlaylistDetails(id: string){
   return this.http.get<any>(`https://api.spotify.com/v1/browse/featured-playlists/${id}`, {headers: this.integratePlayListDetails})
